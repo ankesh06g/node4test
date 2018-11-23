@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>All Events</h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>events</th>
+                <th>descriptin</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (var i of evnt) { %>
+                <tr>
+                    <td><%= i.name %></td>
+                    <td><%= i.description %></td>
+                    <td><a href="/events/<%= i.slug %>" class="btn btn-primary">view</a></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
